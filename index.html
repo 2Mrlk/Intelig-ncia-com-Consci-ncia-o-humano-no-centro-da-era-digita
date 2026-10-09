@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Quem escreveu isso? | Squad 01 – Inteligência com Consciência</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;800&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+--bg:#f3f1fb;--card:#fff;--ink:#17161f;--mut:#585668;--pri:#5b34d6;--acc:#ef6a57;--hl:#ffd84d;--ok:#13885a;--line:#ddd9ee;--soft:#e9e4fb;--dk:#17161f;--dkt:#f4f2ff;
+--hd:"Bricolage Grotesque",system-ui,sans-serif;--sf:"Source Serif 4",Georgia,serif;--bd:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121118;--card:#1d1b27;--ink:#f1f0f8;--mut:#a9a7ba;--pri:#a48bff;--acc:#ff8a78;--hl:#8a6d00;--ok:#4ccb8e;--line:#34313f;--soft:#26223a;--dk:#0b0a10}}
+:root[data-theme="dark"]{--bg:#121118;--card:#1d1b27;--ink:#f1f0f8;--mut:#a9a7ba;--pri:#a48bff;--acc:#ff8a78;--hl:#8a6d00;--ok:#4ccb8e;--line:#34313f;--soft:#26223a;--dk:#0b0a10}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth;height:auto}
+*,*:before,*:after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--bd);line-height:1.6;font-size:17px}
+:focus-visible{outline:3px solid var(--pri);outline-offset:2px}
+.w{max-width:900px;margin:0 auto;padding:0 22px}
+h1,h2,h3,h4{font-family:var(--hd);margin:0;line-height:1.08;letter-spacing:-.015em}
+h2{font-size:clamp(30px,5.5vw,44px);font-weight:800}
+.sub{color:var(--mut);margin:10px 0 28px;max-width:60ch}
+section{padding:64px 0}
+.alt{background:var(--soft)}
+.hero{background:var(--dk);color:var(--dkt);padding:60px 0 56px}
+.hero .g{display:grid;grid-template-columns:1.1fr 1fr;gap:36px;align-items:center}
+@media(max-width:760px){.hero .g{grid-template-columns:1fr}}
+.hero h1{font-size:clamp(44px,10vw,84px);font-weight:800}
+.hero p.l{color:#c9c6dd;font-size:19px;margin:18px 0 26px;max-width:42ch}
+.brand{font-size:14px;color:#a9a6c2;margin-bottom:18px}
+.sheet{background:#fbfaf6;color:#222;border-radius:4px;padding:26px 24px 26px 46px;font-family:var(--sf);font-size:18px;line-height:1.75;box-shadow:0 18px 40px rgba(0,0,0,.45);background-image:linear-gradient(90deg,transparent 34px,#ef6a57 34px,#ef6a57 35px,transparent 35px)}
+mark{background:linear-gradient(transparent 52%,var(--hl) 52%);color:inherit;padding:0 1px}
+.sheet mark{background:linear-gradient(transparent 52%,#ffd84d 52%)}
+mark[data-n]:after{content:attr(data-n);font:800 11px var(--bd);background:var(--acc);color:#fff;border-radius:50%;display:inline-block;min-width:17px;height:17px;line-height:17px;text-align:center;vertical-align:super;margin-left:2px}
+.cap{font-size:13px;color:#a9a6c2;margin-top:12px}
+.btn{display:inline-block;background:var(--pri);color:#fff;border:0;padding:13px 22px;border-radius:999px;font:700 16px var(--bd);cursor:pointer;text-decoration:none}
+.hero .btn{background:var(--acc);color:#17161f}
+.btn.gh{background:transparent;border:2px solid currentColor;color:inherit}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:0;border-top:3px solid var(--ink);counter-reset:s;margin-top:8px}
+.steps div{padding:18px 18px 8px 0}
+.steps div:before{counter-increment:s;content:counter(s);font:800 38px var(--hd);color:var(--pri);display:block}
+.steps h4{font-size:19px;margin-bottom:4px}.steps p{margin:0;color:var(--mut);font-size:15px}
+.sg{border-top:1px solid var(--line);padding:26px 0;display:grid;grid-template-columns:64px 1fr;gap:6px 18px}
+.sg:last-of-type{border-bottom:1px solid var(--line)}
+.sg .n{font:800 52px var(--hd);color:var(--acc);line-height:1}
+.sg h3{font-size:25px}
+.sg .d{color:var(--mut);margin:4px 0 14px}
+.ex{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:640px){.ex{grid-template-columns:1fr}.sg{grid-template-columns:44px 1fr}.sg .n{font-size:36px}}
+.q{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 16px;font-family:var(--sf);font-size:16.5px;line-height:1.6}
+.q small{display:block;font:700 12px var(--bd);color:var(--mut);margin-bottom:5px}
+.q.h{border-color:var(--ok)}.q.a{border-color:var(--acc)}
+.chk{margin-top:10px;font-size:15px}.chk b{color:var(--pri)}
+.note{border-left:5px solid var(--acc);padding:12px 16px;background:var(--card);border-radius:0 10px 10px 0;margin-top:26px;font-size:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px;margin-bottom:18px}
+.card h3{font-size:22px;margin-bottom:8px}
+.card blockquote{margin:0 0 14px;font-family:var(--sf);font-size:18px;line-height:1.7;padding-left:16px;border-left:4px solid var(--pri)}
+.opts{display:flex;gap:10px;flex-wrap:wrap}
+.opts button{flex:1 1 150px;padding:12px;border-radius:999px;border:2px solid var(--line);background:var(--card);color:var(--ink);font:700 16px var(--bd);cursor:pointer}
+.opts button:hover:not(:disabled){border-color:var(--pri)}
+.opts button:disabled{cursor:default;opacity:.55}
+.opts button.right{border-color:var(--ok);color:var(--ok);opacity:1}
+.opts button.wrong{border-color:var(--acc);color:var(--acc);opacity:1}
+.rv{display:none;margin-top:14px;padding:14px;background:var(--soft);border-radius:10px;font-size:16px}.rv.show{display:block}
+.score{font:800 22px var(--hd);margin-top:6px}
+.ck label{display:flex;gap:12px;padding:12px 0;border-bottom:1px solid var(--line);cursor:pointer}
+.ck input{margin-top:5px;width:19px;height:19px;accent-color:var(--pri)}
+.vd{margin-top:14px;font-weight:700}
+ol.p{padding-left:22px;margin:8px 0 0}ol.p li{margin-bottom:6px}
+textarea{width:100%;min-height:170px;padding:14px;border-radius:12px;border:2px solid var(--line);background:var(--card);color:var(--ink);font:18px/1.6 var(--sf);resize:vertical}
+.row{display:flex;gap:12px;padding:13px 0;border-bottom:1px solid var(--line)}
+.row p{margin:2px 0 0;color:var(--mut);font-size:15.5px}
+.ov{margin-top:16px;padding:16px;background:var(--soft);border-radius:10px;font-weight:700}
+.sm{font-size:14px;color:var(--mut);margin-top:12px}
+.fin{background:var(--dk);color:var(--dkt);text-align:center;padding:72px 0}
+.fin p{font:800 clamp(26px,5vw,44px)/1.15 var(--hd);max-width:20ch;margin:0 auto}
+.fin em{font-style:normal;color:var(--hl)}
+.tb{overflow-x:auto}table{width:100%;border-collapse:collapse}td,th{padding:9px;border-bottom:1px solid var(--line);text-align:left;font-size:15px;vertical-align:top}
+.hunt{font-family:var(--sf);font-size:18px;line-height:2}
+.tk{cursor:pointer;border-bottom:2px dotted var(--mut);border-radius:3px;padding:1px 2px}
+.tk:hover{background:var(--soft)}
+.tk.on{background:var(--hl);border-bottom-color:transparent}
+.tk.ok{background:color-mix(in srgb,var(--ok) 35%,transparent);border-bottom-color:transparent}
+.tk.miss{outline:2px dashed var(--acc);border-bottom-color:transparent}
+.tk.bad{background:color-mix(in srgb,var(--acc) 30%,transparent);text-decoration:line-through;border-bottom-color:transparent}
+.tk.ok:after,.tk.miss:after{content:" (" attr(data-l) ")";font:700 12px var(--bd);color:var(--pri)}
+.hres{margin-top:14px;padding:14px;background:var(--soft);border-radius:10px;font-weight:700;display:none}
+.hres.show{display:block}
+.hres span{display:block;font-weight:400;font-size:15px;margin-top:6px}
+.lg{font-size:14px;color:var(--mut);margin:0 0 14px}
+footer{padding:28px 0 44px;color:var(--mut);font-size:14px}
+</style>
+</head>
+<body>
+<header class="hero"><div class="w"><div class="g">
+<div>
+<div class="brand">Squad 01 · Inteligência com Consciência · SENAI-SP</div>
+<h1>Quem escreveu isso?</h1>
+<p class="l">Aprenda a ler um texto como detetive: ache os sinais, confira as fontes e decida com a sua cabeça.</p>
+<a class="btn" href="#tutorial">Começar pelo tutorial</a> <a class="btn gh" href="#analisador">Ir ao analisador</a>
+</div>
+<div>
+<div class="sheet">Em um cenário cada vez mais competitivo, <mark data-n="1">é importante destacar</mark> que a IA <mark data-n="4">elimina completamente</mark> o erro humano. <mark data-n="5">Segundo um estudo de 2023, 87%</mark> das fábricas já usam IA. <mark data-n="3">Em suma</mark>, o futuro é inevitável.</div>
+<div class="cap">Texto de exemplo com os sinais marcados. Você vai aprender cada um logo abaixo.</div>
+</div>
+</div></div></header>
+
+<section id="tutorial"><div class="w">
+<h2>Tutorial: como usar o site</h2>
+<p class="sub">Quatro passos. Em grupo, o jogo funciona melhor com votação na sala.</p>
+<div class="steps">
+<div><h4>Aprenda os sinais</h4><p>Veja os 5 sinais de um texto gerado por IA, com exemplos.</p></div>
+<div><h4>Dê o palpite</h4><p>Leia 3 textos e escolha: IA ou pessoa?</p></div>
+<div><h4>Cace e verifique</h4><p>Toque nos trechos suspeitos e confira se as fontes existem.</p></div>
+<div><h4>Analise o seu</h4><p>Cole um texto e veja quais sinais aparecem.</p></div>
+</div>
+<div class="note"><b>Regra de ouro:</b> palpite não é prova. Quem decide é o humano, depois de analisar e verificar.</div>
+</div></section>
+
+<section id="sinais" class="alt"><div class="w">
+<h2>Os 5 sinais de alerta</h2>
+<p class="sub">Aprenda antes de jogar. Cada sinal vem com um exemplo e um jeito de conferir.</p>
+
+<div class="sg"><div class="n">1</div><div>
+<h3>Linguagem genérica</h3><p class="d">Frases bonitas e repetidas que servem para qualquer assunto.</p>
+<div class="ex"><div class="q a"><small>Parece IA</small><mark>Em suma</mark>, a IA é uma <mark>poderosa ferramenta</mark> para o futuro, <mark>desde que utilizada de forma responsável</mark>.</div>
+<div class="q h"><small>Parece pessoa</small>A IA da nossa linha de pintura reduziu o retrabalho, mas só depois de ajustarmos a iluminação.</div></div>
+<p class="chk"><b>Como conferir:</b> tente trocar a frase por algo específico (qual máquina? qual empresa?). Se não der, ela é vazia.</p></div></div>
+
+<div class="sg"><div class="n">2</div><div>
+<h3>Falta de experiência concreta</h3><p class="d">Não há pessoa, lugar, data ou situação real.</p>
+<div class="ex"><div class="q a"><small>Parece IA</small>Muitas empresas têm obtido ótimos resultados com a tecnologia.</div>
+<div class="q h"><small>Parece pessoa</small>Na terça passada, a esteira parou porque o sensor estava sujo de graxa.</div></div>
+<p class="chk"><b>Como conferir:</b> procure quem, onde e quando. Detalhes reais são difíceis de inventar, mas uma IA pode imitá-los.</p></div></div>
+
+<div class="sg"><div class="n">3</div><div>
+<h3>Estrutura e ritmo previsíveis</h3><p class="d">Introdução, três pontos e conclusão moralizante, com frases do mesmo tamanho.</p>
+<div class="ex"><div class="q a"><small>Parece IA</small>Primeiro, reduz custos. Segundo, aumenta a eficiência. Terceiro, melhora a qualidade. <mark>Em conclusão</mark>, vale a pena.</div>
+<div class="q h"><small>Parece pessoa</small>Custou caro no começo. Depois, não: em seis meses, o conserto parou de aparecer na lista de pendências.</div></div>
+<p class="chk"><b>Como conferir:</b> leia em voz alta. Se o ritmo for sempre igual, desconfie.</p></div></div>
+
+<div class="sg"><div class="n">4</div><div>
+<h3>Afirmações absolutas</h3><p class="d">Sem “talvez”, “em geral” ou exceções.</p>
+<div class="ex"><div class="q a"><small>Parece IA</small>A IA <mark>elimina completamente</mark> o erro humano e a supervisão é <mark>desnecessária</mark>.</div>
+<div class="q h"><small>Parece pessoa</small>A IA ajudou a achar falhas, mas ainda erra quando o ambiente muda.</div></div>
+<p class="chk"><b>Como conferir:</b> pergunte “sempre? para todos?” e procure uma exceção. Se existir, o texto exagerou.</p></div></div>
+
+<div class="sg"><div class="n">5</div><div>
+<h3>Fontes que não existem</h3><p class="d">Estudo, autor ou porcentagem que ninguém encontra. É a chamada “alucinação”.</p>
+<div class="ex"><div class="q a"><small>Parece IA</small><mark>Segundo o Dr. Marcus Hellweg, de Stanford (2023), 87%</mark> das indústrias usam IA.</div>
+<div class="q h"><small>Fonte verificável</small>Segundo a Pesquisa Industrial Anual do IBGE (edição e tabela citadas), o setor empregava X pessoas.</div></div>
+<p class="chk"><b>Como conferir:</b> busque autor, título e ano em base confiável. Sem rastro? Registre “não verificado” e não use.</p></div></div>
+
+<div class="note"><b>Atenção:</b> sinais são indícios, não provas. Textos humanos também podem ser genéricos, e nenhum detector de IA é 100% confiável. Por isso a conclusão vem de analisar o texto e verificar as fontes.</div>
+</div></section>
+
+<section id="jogo"><div class="w">
+<h2>Rodada 1: seu palpite</h2>
+<p class="sub">Agora é com você. Leia, escolha e veja a resposta na hora.</p>
+
+<div class="card" data-ans="ia"><h3>Texto A</h3>
+<blockquote>A inteligência artificial vem transformando a indústria de maneira significativa. Em um cenário cada vez mais competitivo, as empresas buscam soluções inovadoras para otimizar processos e aumentar a eficiência. Além disso, a IA permite reduzir custos e melhorar a qualidade dos produtos. Por outro lado, é importante destacar os desafios éticos envolvidos. Em suma, a inteligência artificial representa uma poderosa ferramenta para o futuro da indústria, desde que utilizada de forma responsável e consciente.</blockquote>
+<div class="opts"><button data-g="ia">Foi IA</button><button data-g="humano">Foi pessoa</button></div>
+<div class="rv"><b>Resposta: IA.</b> Sinais 1, 2 e 3: linguagem genérica, nenhum exemplo real e estrutura previsível.</div></div>
+
+<div class="card" data-ans="humano"><h3>Texto B</h3>
+<blockquote>No meu estágio, a gente tinha uma esteira que parava toda terça-feira por causa de um sensor que sujava de graxa. Um colega sugeriu usar um modelo de visão para prever a falha, e o resultado foi meio bagunçado: errava quando a luz do galpão mudava. Só depois de trocar a câmera de lugar é que funcionou. Aprendi que a ferramenta ajuda, mas quem entende o chão de fábrica ainda é a pessoa que está lá.</blockquote>
+<div class="opts"><button data-g="ia">Foi IA</button><button data-g="humano">Foi pessoa</button></div>
+<div class="rv"><b>Resposta: pessoa.</b> Tem experiência vivida (terça-feira, graxa, luz do galpão), imperfeições e opinião própria. Mesmo assim, uma IA pode imitar isso: o texto sozinho nunca é prova.</div></div>
+
+<div class="card" data-ans="ia"><h3>Texto C</h3>
+<blockquote>Segundo um estudo da Universidade de Stanford publicado em 2023 pelo pesquisador Dr. Marcus Hellweg, 87% das indústrias brasileiras já utilizam IA em toda a linha de produção. O estudo conclui que a automação inteligente elimina completamente a margem de erro humano. Esses números demonstram que a adoção da IA é inevitável e que sua supervisão tornou-se desnecessária.</blockquote>
+<p class="sm">Texto criado pelo squad para o jogo: autor, estudo e dados são inventados de propósito.</p>
+<div class="opts"><button data-g="ia">Foi IA</button><button data-g="humano">Foi pessoa</button></div>
+<div class="rv"><b>Resposta: IA, com “alucinação”.</b> Sinais 4 e 5: absolutos e fontes inventadas. Só dá para provar verificando, o que você faz na Rodada 3.</div></div>
+<div class="score" id="score"></div>
+</div></section>
+
+<section id="caca" class="alt"><div class="w">
+<h2>Rodada 2: caça às pistas</h2>
+<p class="sub">Toque nos trechos que parecem sinais de alerta. Depois toque em "Conferir" para ver o que você achou. Dá para fazer sozinho no celular.</p>
+<p class="lg">Cuidado: nem tudo que parece suspeito é sinal. Alguns trechos são normais. E há sinais que são ausências (como a falta de experiência concreta), que não dá para marcar no texto.</p>
+<div class="card"><h3>Texto A</h3><div class="hunt" data-t="A">A inteligência artificial vem transformando a indústria de maneira significativa. <span class="tk" data-s="1" data-l="sinal 1: linguagem genérica">Em um cenário cada vez mais competitivo</span>, <span class="tk" data-s="0">as empresas</span> buscam <span class="tk" data-s="1" data-l="sinal 1: linguagem genérica">soluções inovadoras para otimizar processos</span> e aumentar a eficiência. <span class="tk" data-s="1" data-l="sinal 1: linguagem genérica">Além disso</span>, a IA permite reduzir custos e melhorar a <span class="tk" data-s="0">qualidade dos produtos</span>. Por outro lado, <span class="tk" data-s="1" data-l="sinal 1: linguagem genérica">é importante destacar</span> os <span class="tk" data-s="0">desafios éticos</span> envolvidos. <span class="tk" data-s="3" data-l="sinal 3: estrutura previsível">Em suma</span>, a inteligência artificial representa uma <span class="tk" data-s="1" data-l="sinal 1: linguagem genérica">poderosa ferramenta</span> para o futuro da indústria.</div></div>
+<div class="card"><h3>Texto C</h3><div class="hunt" data-t="C"><span class="tk" data-s="5" data-l="sinal 5: fonte para verificar">Segundo um estudo da Universidade de Stanford publicado em 2023 pelo pesquisador Dr. Marcus Hellweg</span>, <span class="tk" data-s="5" data-l="sinal 5: fonte para verificar">87%</span> das <span class="tk" data-s="0">indústrias brasileiras</span> já utilizam IA em toda a <span class="tk" data-s="0">linha de produção</span>. O estudo conclui que a <span class="tk" data-s="0">automação inteligente</span> <span class="tk" data-s="4" data-l="sinal 4: absoluto">elimina completamente</span> a margem de erro humano. A adoção da IA é <span class="tk" data-s="4" data-l="sinal 4: absoluto">inevitável</span> e sua supervisão tornou-se <span class="tk" data-s="4" data-l="sinal 4: absoluto">desnecessária</span>.</div></div>
+<div style="display:flex;gap:10px;flex-wrap:wrap"><button class="btn" id="hc">Conferir</button><button class="btn gh" id="hr">Recomeçar</button></div>
+<div class="hres" id="hres" aria-live="polite"></div>
+</div></section>
+
+<section class="alt"><div class="w">
+<h2>Rodada 3: detetive de texto</h2>
+<p class="sub">Marque o que você conseguiu confirmar sobre o Texto C.</p>
+<div class="card ck" id="ck">
+<label><input type="checkbox" data-bad="1"> O autor “Dr. Marcus Hellweg” aparece em bases acadêmicas confiáveis.</label>
+<label><input type="checkbox" data-bad="1"> O estudo de Stanford de 2023 foi encontrado no site da instituição.</label>
+<label><input type="checkbox" data-bad="1"> O número “87%” aparece em órgão oficial (IBGE, CNI, MCTI).</label>
+<label><input type="checkbox" data-bad="0"> Encontrei afirmações absolutas e sem nuance no texto.</label>
+<label><input type="checkbox" data-bad="0"> Procurei a informação em pelo menos duas fontes independentes.</label>
+<div class="vd" id="vd"></div></div>
+<h3>Passo a passo da verificação</h3>
+<ol class="p"><li>Copie a citação ou o dado.</li><li>Busque em base confiável: catálogo da biblioteca, Google Acadêmico, sites oficiais.</li><li>Procure o autor e o estudo citados.</li><li>Não achou? Registre “não verificado” e <b>não use a informação</b>.</li><li>Peça apoio ao bibliotecário, mediador da pesquisa.</li></ol>
+</div></section>
+
+<section id="analisador"><div class="w">
+<h2>Analisador de texto</h2>
+<p class="sub">Cole um texto e veja quais dos 5 sinais aparecem. É uma ferramenta educativa, não um detector.</p>
+<div class="card">
+<textarea id="at" placeholder="Cole aqui um texto com pelo menos 30 palavras…"></textarea>
+<div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap"><button class="btn" id="ab">Analisar texto</button><button class="btn gh" id="ae">Usar exemplo</button></div>
+<div id="ao" style="margin-top:16px" aria-live="polite"></div>
+<p class="sm">O texto é analisado só no seu navegador e não é enviado nem salvo. O resultado mostra indícios, não prova de autoria.</p>
+</div></div></section>
+
+<section class="alt"><div class="w">
+<h2>Para refletir</h2>
+<div class="card"><ul style="margin:0;padding-left:22px"><li>O que a IA fez? O que os humanos decidiram?</li><li>Como verificamos as informações? Onde está a autoria humana?</li><li>Que riscos de desinformação, viés ou erro precisamos considerar?</li></ul></div>
+<h3 style="margin:30px 0 12px;font-size:26px">Uso de IA neste projeto</h3>
+<div class="card tb"><table><tr><th>Etapa</th><th>Uso de IA</th><th>Supervisão humana</th></tr>
+<tr><td>Textos A e C</td><td>[preencher: sim/não e ferramenta]</td><td>Reescritos, erros inseridos de propósito e gabarito conferido pelo squad</td></tr>
+<tr><td>Texto B</td><td>Não</td><td>Escrito por integrante a partir de experiência real</td></tr>
+<tr><td>Este site</td><td>[preencher]</td><td>Conteúdo revisado e validado pelo squad</td></tr></table></div>
+</div></section>
+
+<section class="fin"><div class="w"><p>Usar IA não é pensar menos. É <em>pensar melhor</em>, verificar mais e decidir com responsabilidade.</p></div></section>
+<footer><div class="w"><b>Squad 01</b> · Guilherme Constantino de Lara, Felipe de Goes Souza, Gabriel Augusto Veneruci Siqueira e Miguel Soares Machado · Projeto Inteligência com Consciência: o humano no centro da era digital<br>SENAI-SP · Rede Integrada de Bibliotecas (REIB) · Biblioteca “Gaspar Ricardo Júnior” · Orientação: Prof. Esp. Leandro Gaudio Rosa</div></footer>
+
+<script>
+var hits=0,done=0,cards=document.querySelectorAll('.card[data-ans]');
+cards.forEach(function(c){c.querySelectorAll('.opts button').forEach(function(b){b.addEventListener('click',function(){
+ var a=c.getAttribute('data-ans'),g=b.getAttribute('data-g');
+ c.querySelectorAll('.opts button').forEach(function(x){x.disabled=true;if(x.getAttribute('data-g')===a)x.classList.add('right');});
+ if(g!==a)b.classList.add('wrong');else hits++;
+ c.querySelector('.rv').classList.add('show');done++;
+ if(done===cards.length)document.getElementById('score').textContent='Você acertou '+hits+' de '+cards.length+'. '+(hits===3?'Olho afiado! Mas verificar é sempre melhor que adivinhar.':'Normal: até especialistas erram. Por isso a verificação importa.');
+});});});
+var bx=document.querySelectorAll('#ck input');
+bx.forEach(function(b){b.addEventListener('change',function(){var bad=0,good=0;bx.forEach(function(x){if(x.checked){if(x.getAttribute('data-bad')==='1')bad++;else good++;}});
+ document.getElementById('vd').textContent=bad?'Confira de novo: essas fontes não existem. Essa é a pegadinha do Texto C.':good?'Boa! Fonte não encontrada = “não verificado”, e a informação não deve ser usada.':'';});});
+function cl(t,l){var n=0,f=[];l.forEach(function(w){var i=0,c=0;while((i=t.indexOf(w,i))>-1){c++;i+=w.length;}if(c){n+=c;f.push(w);}});return{n:n,f:f};}
+var CON=['além disso','em suma','por outro lado','é importante destacar','vale ressaltar','cabe destacar','nesse contexto','em um cenário','no mundo atual','em conclusão','dessa forma','ademais','nesse sentido','é fundamental','papel crucial','desempenha um papel','em síntese','otimizar processos','soluções inovadoras'];
+var ABS=['completamente','totalmente','absolutamente','inevitável','impossível','desnecessári','sem dúvida','sempre','nunca','100%','todos os'];
+function an(){
+ var raw=document.getElementById('at').value.trim(),o=document.getElementById('ao');o.textContent='';
+ var w=raw.split(/\s+/).filter(Boolean);
+ if(w.length<30){o.textContent='Cole um texto com pelo menos 30 palavras para a análise fazer sentido.';return;}
+ var t=raw.toLowerCase(),R=[],fl=0,c=cl(t,CON),f1=c.n>=2;
+ R.push([f1,'1. Linguagem genérica',f1?'Encontrei '+c.n+' expressões de efeito ('+c.f.slice(0,4).join(', ')+'). Comum em textos automáticos, mas também em redações escolares.':'Poucas expressões de efeito.']);
+ var fp=/\b(eu|meu|minha|meus|minhas|a gente|aprendi|lembro|estagi)/.test(t),dg=/\d/.test(t)||/\b(segunda|terça|quarta|quinta|sexta|sábado|domingo)/.test(t),f2=!fp&&!dg;
+ R.push([f2,'2. Experiência concreta',f2?'Não vi primeira pessoa, datas, números ou situações vividas.':'Há marcas de experiência ou detalhes concretos.']);
+ var s=raw.split(/[.!?]+\s+/).map(function(x){return x.split(/\s+/).filter(Boolean).length;}).filter(function(n){return n>2;}),f3=false,m3='Poucas frases para avaliar o ritmo.';
+ if(s.length>=4){var m=s.reduce(function(a,b){return a+b;},0)/s.length,v=s.reduce(function(a,b){return a+(b-m)*(b-m);},0)/s.length;f3=Math.sqrt(v)/m<0.3;m3=f3?'As frases têm tamanho muito parecido ('+s.length+' frases). Texto humano costuma variar mais.':'O ritmo das frases varia de forma natural.';}
+ R.push([f3,'3. Estrutura e ritmo',m3]);
+ var a=cl(t,ABS),f4=a.n>=2;
+ R.push([f4,'4. Afirmações absolutas',f4?'Termos absolutos ('+a.f.slice(0,4).join(', ')+'). Pergunte: é mesmo sempre verdade?':'Poucos absolutos. O texto admite nuances.']);
+ var f5=/(segundo|de acordo com|conforme)[^.]{0,80}(estudo|pesquisa|universidade|instituto|relatório|dr\.|dra\.|professor|pesquisador)/.test(t)||/\d+(,\d+)?\s?%/.test(t);
+ R.push([f5,'5. Fontes para verificar',f5?'O texto cita estudo, instituição ou porcentagem. Abra a fonte original: ela existe e diz isso?':'Não achei citações soltas. Verifique afirmações importantes mesmo assim.']);
+ R.forEach(function(r){if(r[0])fl++;var d=document.createElement('div');d.className='row';var e=document.createElement('div');e.textContent=r[0]?'🟠':'🟢';var b=document.createElement('div'),h=document.createElement('b'),p=document.createElement('p');h.textContent=r[1];p.textContent=r[2];b.appendChild(h);b.appendChild(p);d.appendChild(e);d.appendChild(b);o.appendChild(d);});
+ var v=document.createElement('div');v.className='ov';v.textContent=(fl<=1?'Poucos indícios':fl<=3?'Alguns indícios':'Vários indícios')+' ('+fl+' de 5 sinais). Isso não prova se foi IA ou pessoa. Próximo passo: verificar fontes e contexto.';o.appendChild(v);
+}
+document.getElementById('ab').addEventListener('click',an);
+document.getElementById('ae').addEventListener('click',function(){document.getElementById('at').value='A inteligência artificial vem transformando a indústria de maneira significativa. Em um cenário cada vez mais competitivo, as empresas buscam soluções inovadoras para otimizar processos. Além disso, a IA permite reduzir custos. Segundo um estudo recente, 87% das indústrias já utilizam IA. Em suma, a adoção da tecnologia é inevitável e totalmente benéfica para todos os setores.';an();});
+
+var tks=document.querySelectorAll('.tk'),checked=false;
+tks.forEach(function(t){t.addEventListener('click',function(){if(checked)return;t.classList.toggle('on');});});
+document.getElementById('hc').addEventListener('click',function(){
+ checked=true;var found=0,tot=0,bad=0;
+ tks.forEach(function(t){var s=t.getAttribute('data-s')!=='0',on=t.classList.contains('on');t.classList.remove('on');
+  if(s){tot++;if(on){found++;t.classList.add('ok');}else t.classList.add('miss');}else if(on){bad++;t.classList.add('bad');}});
+ var r=document.getElementById('hres');r.classList.add('show');r.textContent='Você achou '+found+' de '+tot+' pistas'+(bad?' e marcou '+bad+' trecho(s) que não são sinais.':'.');
+ var d=document.createElement('span');d.textContent='Verde: acertou. Tracejado: passou despercebido. Riscado: trecho normal. Lembre: sinais são indícios, e quem decide é o humano.';r.appendChild(d);});
+document.getElementById('hr').addEventListener('click',function(){checked=false;tks.forEach(function(t){t.classList.remove('on','ok','miss','bad');});document.getElementById('hres').classList.remove('show');});
+</script>
+</body>
+</html>
